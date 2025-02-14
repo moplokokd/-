@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+        }
+
+        /* Add new home button styles */
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .home-button:hover {
+            background: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(123.gif);
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Rest of your existing styles remain the same */
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 25px;
+            border: 4px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .name {
+            font-size: 26px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 8px;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+            letter-spacing: 1px;
+        }
+
+        .nickname {
+            font-size: 18px;
+            color: #222;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .profile-info {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: left;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+            padding: 5px 0;
+        }
+
+        .info-label {
+            font-weight: 500;
+            color: #222;
+            width: 100px;
+            flex-shrink: 0;
+            font-size: 15px;
+        }
+
+        .info-value {
+            color: #333;
+            flex-grow: 1;
+            font-size: 15px;
+            padding-left: 15px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 500;
+            color: #000;
+            margin: 25px 0 15px;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .education-list {
+            text-align: left;
+            list-style: none;
+            padding: 0 10px;
+        }
+
+        .education-list li {
+            padding: 12px 0;
+            color: #222;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .hobbies-list {
+            text-align: center;
+            list-style: none;
+            padding: 10px 0;
+        }
+
+        .hobbies-list li {
+            display: inline-block;
+            margin: 6px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            font-size: 15px;
+        }
+
+        .contact-info {
+            margin-top: 25px;
+            font-size: 15px;
+            color: #222;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .contact-info .info-item {
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .contact-info .info-label {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .contact-info .info-value {
+            flex-grow: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="home-button">HOME</a>
+    <div class="wrapper">
+        <img src="ขวัญ25.jpg" alt="Profile Picture" class="profile-image">
+        <h1 class="name">นางสาว วาสนา กุมภีร์</h1>
+        <p class="nickname">ชื่อเล่น ขวัญ</p>
+
+        <div class="profile-info">
+            <div class="info-item">
+                <span class="info-label">วันเกิด:</span>
+                <span class="info-value">29/04/2552</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">อายุ:</span>
+                <span class="info-value">15 ปี</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">กรุ๊ปเลือด:</span>
+                <span class="info-value">AB</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">สัญชาติ:</span>
+                <span class="info-value">ไทย</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">ศาสนา:</span>
+                <span class="info-value">พุทธ</span>
+            </div>
+        </div>
+
+        <h2 class="section-title">ประวัติการศึกษา</h2>
+        <ul class="education-list">
+            <li>โรงเรียนบ้านชายทะเลโคกขามมิตรภาพที่95</li>
+            <li>โรงเรียนเทศบาลวัดตึกมหาชยาราม(สมุทรสาคร)</li>
+            <li>วิทยาลัยเทคนิคสมุสาคร</li>
+        </ul>
+
+        <h2 class="section-title">งานอดิเรก</h2>
+        <ul class="hobbies-list">
+            <li>นอน</li>
+            <li>ฟังเพลง</li>
+            <li>คุยกับแฟน</li>
+        </ul>
+
+        <div class="contact-info">
+            <h2 class="section-title">ติดต่อ</h2>
+            <div class="info-item">
+                <span class="info-label">อีเมล:</span>
+                <span class="info-value">kwanwassana789@gamil.com</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">เบอร์โทร:</span>
+                <span class="info-value">064-506-8697</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
